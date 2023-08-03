@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=VT323&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font: inherit; */
+  font-family: "VT323", sans-serif;
+}
+
+html {
+  color-scheme: dark light;
+  scrollbar-width: none;
+}
+
+:root {
+  --bg-main: #001628;
+  --primary: #99d9d9;
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  display: none;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: var(--bg-main);
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  border-bottom: 10px solid var(--primary);
+  color: var(--primary);
+  position: fixed;
+  background: var(--bg-main);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header > div {
+  display: flex;
+  height: fit-content;
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--primary);
+  padding: 0 10px;
+}
+
+header > div > div {
+  display: flex;
+  grid-gap: 1em;
+  align-items: center;
+}
+
+img {
+  width: 100px;
+  height: auto;
+}
+
+main {
+  display: grid;
+  overflow: hidden;
+  grid-gap: 1em;
+}
+
+.grid-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  user-select: none;
+  color: var(--primary);
+}
+
+footer {
+  background: var(--bg-main);
+  width: 100%;
+  /* height: 100px; */
+  height:105px;
+  border-top: 10px solid var(--primary);
+  position: fixed;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-content: center;
+  justify-items: center;
+  grid-gap: 1em;
+}
+
+.progress-container {
+  width: 90%;
+  /* height: 90%; */
+}
+
+.progress-number,
+.progress-percent {
+  border: 1px solid var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  color: var(--primary);
+  height: 45%;
+}
+
+.progress-number {
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  background: var(--primary);
+  /* width: 10%; */
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: relative;
+  margin-right: auto;
+}
+
+span {
+  position: absolute;
+}
+
+.serialID {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20px;
+  z-index: 5;
+  grid-column: 1/6;
+  border-top: 1px solid var(--primary);
+  font-size: 1.5em;
+  color: var(--primary);
+}
+
+.line-cont {
+  display: flex;
+  flex-direction: row;
+}
+
+hr {
+  background-color: var(--primary);
+  transition: transform 0.5s ease-out 100ms;
+  border:#99d9d9;
+  width: 50%;
+  height: 2px;
+}
+
+.first {
+  transform-origin: bottom left;
+}
+
+.second {
+  transform-origin: bottom right;
+}
+
+.rotate-first {
+  transform: rotate(-110deg);
+}
+
+.rotate-second {
+  transform: rotate(110deg);
+}
