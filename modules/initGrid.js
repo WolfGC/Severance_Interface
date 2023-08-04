@@ -1,5 +1,5 @@
 function initGrid(gridContainer, x) {
-  gridContainer.style.gridTemplateColumns = `repeat(${x}, 1fr)`;
+  // gridContainer.style.gridTemplateColumns = `repeat(${x}, 1fr)`;
 
   for (let i = 0; i < x * x; i++) {
     const gridBlock = document.createElement("div");
